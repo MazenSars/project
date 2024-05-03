@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!--content-->
+<section class="container content-container-bg rounded-5 p-4 mb-4">
+    <div class="row">
+        <div class="col col-12 col-md-7">
+            <img src="~/img/man-speaking-with-megaphone.jpg" class="img-fluid rounded" />
+        </div>
+        <div class="col text-center pt-3">
+            <h1 class="text-uppercase text-wrap contenttext text-light mb-4">
+                help make a<br /><span class="fw-bold">difference</span>
+            </h1>
+            <h2 id="sign_in" class="text-light mt-5 mb-3">Sign in</h2>
+            <form asp-controller="Log" asp-action="Check" method="post">
+                <div class="input-group mb-3">
+                    <label for="email" class="form-label input-group text-light">Email Address</label>
+                    <span class="input-group-text" id="addon"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" class="form-control input" name="Email" id="email" placeholder="Email">
+                </div>
+                <div class="input-group mb-3">
+                    <label for="password" class="form-label input-group text-light">Password</label>
+                    <span class="input-group-text" id="addon"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control input" name="Password" id="password"
+                           placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary" id="btn">Log In</button>
+                <p class="text-light mt-3" id="sign_up">
+                    not a member yet? you can <a asp-controller="Home" asp-action="Signup"
+                                                 class="text-light">sign up</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!--this section is for adding content dynamically through javascript-->
+<section class="container py-5">
+    <h2 class="text-center mb-4">Recent Posts</h2>
+    <div id="posts-container">
+        <div class="card">
+            <div class="card-title" id="title">
+            </div>
+            <div class="card-text" id="description">
+            </div>
+        </div>
+    </div>
+</section>

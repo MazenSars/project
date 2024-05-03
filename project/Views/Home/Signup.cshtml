@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Signup Page";
+}
+
+<div class="container h-100 d-flex justify-content-center align-items-center mb-5">
+    <div class="card rounded shadow p-4 content-container-bg">
+        <h2 class="text-center mb-4">Join the Community</h2>
+        <form asp-controller="Signup" asp-action="StoreUser" method="post">
+            <div class="input-group mb-3">
+                <label for="username" class="form-label input-group text-light">Username</label>
+                <span class="input-group-text" id="addon"><i class="fa-solid fa-user"></i></span>
+                <input type="text" class="form-control" name="Username" id="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group mb-3">
+                <label for="email" class="form-label input-group text-light">Email Address</label>
+                <span class="input-group-text" id="addon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" class="form-control" name="Email" id="email" placeholder="Enter your email">
+            </div>
+            <div class="input-group mb-3">
+                <label for="password" class="form-label input-group text-light">Password</label>
+                <span class="input-group-text" id="addon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" class="form-control" name="Password" id="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="agree">
+                <label class="form-check-label" for="agree">I agree to the terms and conditions</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+        </form>
+        <p class="text-center mt-3">Already have an account? <a asp-controller="Home" asp-action="Index">Log In</a></p>
+    </div>
+</div>

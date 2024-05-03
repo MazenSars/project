@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Admin Page";
+}
+
+<!--content-->
+<div class="container">
+    <h1 class="text-center text-primary">Admin Panel</h1>
+    <h2 class="text-secondary mt-5">Members</h2>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Email</th>
+                <th scope="col">Status</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="memberList">
+        </tbody>
+    </table>
+
+    <h2 class="text-secondary mt-5">Petitions</h2>
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Signatures</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody id="petitionList">
+        </tbody>
+    </table>
+</div>

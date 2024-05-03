@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Petition Page";
+}
+
+<div class="container mt-5 mb-5">
+    <div class="card shadow rounded-3 border-primary">
+        <div class="card-header bg-primary text-white">
+            <h5 class="card-title mb-0">Create a Petition</h5>
+        </div>
+        <div class="card-body">
+            <form action="../js/petition.js" method="post" id="petition-form">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Petition Title:</label>
+                    <input type="text" id="title" name="title" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Petition Description:</label>
+                    <textarea id="description" name="description" class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <input type="file" class="form-control" id="fileInput">
+                    <label for="fileInput" class="form-label mt-1">
+                        Upload a File (Optional: Photo, Document,
+                        etc.)
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary float-end">Submit Petition</button>
+            </form>
+        </div>
+    </div>
+    <p id="message"></p>
+</div>
